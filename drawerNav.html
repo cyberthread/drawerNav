@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drawer Navigation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container"> <a href="#mainContent" class="skip">Skip to main content</a>
+    <div class="container"> <a href="#mainContent" class="skip">Skip to main content</a> <!-- the skip to main content feature is helpful for screen reader users. It is the first option on the page and allows a user to jump directly to the primary content of the page-->
         <header>
             <button onclick="openNav()">Menu</button>
         </header>
@@ -33,15 +34,7 @@
         </main>
         <footer> </footer>
     </div>
-    <script>
-        /* place the navigation on the page */
-        function openNav() {
-            document.getElementById("theDrawer").style.right = "0";
-        }
-        /* place the navigation off the page */
-        function closeNav() {
-            document.getElementById("theDrawer").style.right = "-250px";
-        }
+    <script src="drawer.js">
     </script>
 </body>
 
