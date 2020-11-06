@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer Navigation</title>
+</head>
+
+<body>
+    <div class="container"> <a href="#mainContent" class="skip">Skip to main content</a>
+        <header>
+            <button onclick="openNav()">Menu</button>
+        </header>
+        <nav class="drawer" id="theDrawer">
+            <!-- the aria-label helps screen reader users understand the purpose of the button because of the unclear text "x". When the botton gains keyboard focus it opens the navigation so that the keyboard focus can be visible. -->
+            <button aria-label="Close" class="closeBtn" onfocus="openNav()" onclick="closeNav()">&times;</button>
+            <ul>
+                <li><a href="index.html" onfocus="openNav()">Home</a></li>
+                <li><a href="about.html" onfocus="openNav()">About</a></li>
+                <li><a href="events.html" onfocus="openNav()">Events</a></li>
+                <li><a href="programs.html" onfocus="openNav()" onblur="closeNav()">Programs</a></li>
+            </ul>
+        </nav>
+        <main id="mainContent">
+            <h1>I wish this site was about chocolate.</h1>
+            <p> Chocolate bar muffin cotton candy sesame snaps cheesecake oat cake sesame snaps. Danish cotton candy apple pie bonbon cheesecake dragée jelly marzipan chupa chups. Pudding jelly-o brownie cookie oat cake. Ice cream donut marshmallow carrot cake. Icing candy candy marzipan. Chocolate bar sesame snaps macaroon marshmallow jujubes soufflé cheesecake dessert. Pudding jelly beans carrot cake. Ice cream bonbon halvah gummi bears wafer biscuit.</p>
+            <p>Tootsie roll bonbon sweet candy canes powder cupcake chocolate caramels sesame snaps. Donut icing cupcake caramels cookie tiramisu brownie topping biscuit. Wafer ice cream croissant. Chocolate bar dragée brownie sesame snaps. Gingerbread candy canes sesame snaps muffin pudding. Sugar plum candy sweet roll croissant candy lollipop topping. Fruitcake cotton candy jujubes fruitcake sweet cake apple pie macaroon. Chocolate tiramisu donut. Carrot cake jujubes caramels marshmallow gummi bears. Cupcake pastry gummi bears powder.</p>
+            <h2>Ooo! Did you say ice cream?</h2>
+            <p>Jujubes sweet roll macaroon liquorice carrot cake danish gingerbread. Cookie dessert oat cake tiramisu pie. Dragée cake jujubes macaroon bear claw tiramisu sugar plum. Chocolate cake biscuit jelly-o soufflé cookie caramels lemon drops cookie. Gummies dragée cotton candy chocolate. Lemon drops cookie chocolate cake tart carrot cake ice cream gummi bears. Cotton candy gummies ice cream. Carrot cake jujubes pastry.</p>
+            <p>Fruitcake macaroon bear claw ice cream pudding brownie sweet roll. Candy canes marshmallow sugar plum tootsie roll chocolate bar. Dragée chocolate bar apple pie jelly-o apple pie lollipop gingerbread gingerbread marshmallow. Powder candy canes muffin jujubes wafer. Powder lollipop cookie dragée croissant cotton candy. Cupcake liquorice brownie. Cookie bear claw cupcake danish cake. Cheesecake marzipan cheesecake. Candy canes lemon drops sesame snaps. Jelly sweet roll chocolate bar.</p>
+            <p>Ice cream jelly-o chocolate cupcake wafer chupa chups bear claw candy chocolate cake. Toffee icing pudding sesame snaps bonbon pie wafer sesame snaps pudding. Lemon drops ice cream apple pie lemon drops jelly beans brownie biscuit muffin. Halvah marzipan cupcake tiramisu tootsie roll lemon drops sesame snaps. Jujubes dragée chocolate bar cheesecake pudding bonbon. Pudding chupa chups croissant cotton candy bear claw. Wafer dragée tootsie roll. Bonbon sweet roll wafer chocolate bar.</p>
+        </main>
+        <footer> </footer>
+    </div>
+    <script>
+        /* place the navigation on the page */
+        function openNav() {
+            document.getElementById("theDrawer").style.right = "0";
+        }
+        /* place the navigation off the page */
+        function closeNav() {
+            document.getElementById("theDrawer").style.right = "-250px";
+        }
+    </script>
+</body>
+
+</html>
